@@ -7,18 +7,23 @@
 
 
 ```
-PSR 
-PSR 
+-------
+| PSR |
+-------
 |
-|- pagina pubblica
-|- pagina privata dashboard
 |
-|---> kumale (app)
-|---> howtodo (app)
-|---> sentinel (app)
-|---> live (app)
-|---> framework (servizio)
-|---> languages (servizio)   
+|-> pagina pubblica
+|-> pagina privata dashboard
+|
+|-> framework (servizio)
+|-> languages (servizio)
+|-> Apps
+    |    
+    |-> kumale
+    |-> howtodo
+    |-> sentinel
+    |-> live
+   
 ```
 
 

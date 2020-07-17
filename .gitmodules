@@ -1,4 +1,8 @@
-[submodule "framework"]
-	path = framework
-	url = https://github.com/CIMAFoundation/portal2-framework.git
+[submodule "framework-ref"]
+	path = framework-ref
+	url = https://github.com/CIMAFoundation/portal-framework.git
 	branch = dev
+[submodule "languages-ref"]
+	path = languages-ref
+	url = https://github.com/CIMAFoundation/portal-languages.git
+	branch = dev-PSR
