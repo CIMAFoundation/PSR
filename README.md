@@ -38,6 +38,9 @@ Per ogni installazione compresa quella di progetto, puntarsi su branch adatto ed
 npm install
 ```
 
+```git pull
+git pull --recurse-submodules
+```
 
  
 

@@ -1,0 +1,59 @@
+<!-- begin #header -->
+<div id="header" class="header {{municipality_alarm.stato}} navbar-fixed-top flex-container start animated fadeIn delay-001" >
+    <!-- begin container-fluid -->
+
+        <div class="flex-container start ">
+            <div class="flex-item flex-container start navbar-brand">
+                <img class="flex-item" src="portals/commons/img/logo/logo-regione.svg" alt="">
+                <i class="flex-item {{ 'LOGO' | translate}}" alt="" ></i>
+                <div class="flex-item brand_slug before ">{{ 'BRAND_BEFORE' | translate}}</div>
+                <div class="flex-item brand_slug after ">
+                    <!--{{ 'BRAND_AFTER' | translate}}-->
+                    <i class="fa fa-home"></i>
+                </div>
+                <div class="flex-item brand_slug hat_domain" ng-if="!isfireApp">{{ 'BRAND' | translate}} </div>
+                <div class="flex-item brand_slug hat_domain" ng-if="isfireApp">{{ 'BRAND_2ND'| translate}}</div>
+
+                <span  class="flex-item brand_slug hat_domain" ng-if="amIAuthenticated()">{{extractMunicipalityName(acSession.hat.domain.descr)}}</span>
+            </div>
+            <fasi-widget class="flex-item animated fadeIn delay-003" ></fasi-widget>
+        </div>
+
+    <!-- end mobile sidebar expand / collapse button -->
+
+
+        <!-- begin header navigation right -->
+        <div class="auth navbar-nav flex-item flex-container end">
+            <!-- Applicazioni versione Mobile -->
+            <div class="dropdown visible-xs visible-sm flex-item" ng-if="amIAuthenticated()">
+                <div class="dropdown-menu animated fadeInLeft delay-006">
+                    <div class="arrow"></div>
+                    <div ng-repeat="app in applications">
+                        <a href="{{appUrl(app)}}">
+                            <i class="{{app.classIcon}}"></i>
+                            <span>{{app.name | translate}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lingue -->
+
+            <!-- Login -->
+            <div class="dropdown navbar-user acauth flex-item"></div>
+
+            <!-- button toggle for responsive standard on #header-navbar -->
+            <!--<div class="flex-item">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                    <i class="fa fa-bars fa-2x" title=""></i>
+                </button>
+            </div>-->
+        </div>
+        <!-- end header navigation right -->
+
+    <!-- end container-fluid -->
+
+
+</div>
+<!-- end #header -->
+

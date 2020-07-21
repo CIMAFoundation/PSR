@@ -1,0 +1,20 @@
+
+<div class="footer {{currentOs.phase.idfase}} animated fadeInUpBig delay-005 ">
+    <div ng-click="iconize = !iconize" ng-if="isfireApp">
+        <button class="btn btn-circle btn-success btn--kredit" >
+            <i class="fa fa-info"></i>
+        </button>
+        <div class="block block--kredit" ng-if="iconize" ng-style="(!iconize)?{}:{}" >
+            <img src="apps/l!ve2/img/psr.jpg" alt="">
+        </div>
+    </div>
+    <ac-date></ac-date>
+    <div class="flex-container center">
+
+        <img class="flex-item m-r-20" src="portals/commons/img/logo/acrotec_png.png" alt="">
+        <img class="flex-item m-r-20" src="portals/commons/img/logo/cima_png.png" alt="">
+        <!--<div class="flex-item m-l-20 block">
+        </div>-->
+    </div>
+    <os-view-form></os-view-form>
+</div>

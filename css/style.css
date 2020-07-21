@@ -1,0 +1,18 @@
+@charset "UTF-8";
+:root {
+  --font-size--small: calc((14/16) * 1rem);
+  /* 14px */
+  --font-size--default: calc((16/16) * 1rem);
+  /* 16px */
+  --font-size--large: calc((24/16) * 1rem);
+  /* 24px */ }
+
+ 
+.font-size--small {
+  font-size: var(--font-size--small); }
+
+.font-size--default {
+  font-size: var(--font-size--default); }
+
+.font-size--large {
+  font-size: var(--font-size--large); }
