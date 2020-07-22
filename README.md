@@ -1,9 +1,11 @@
 # PSR
 
 
+
+
 ### progetto PSR:
 
-[PSR - progetto contenitore](https://github.com/CIMAFoundation/PSR.git)
+[PSR - progetto contenitore](https://github.com/CIMAFoundation/PSR.git)  - branch <i><b>dev</b></i>
 
 
 ```
@@ -15,8 +17,8 @@
 |-> pagina pubblica
 |-> pagina privata dashboard
 |
-|-> framework (servizio)
-|-> languages (servizio)
+|-> framework (servizio/submodule)
+|-> languages (servizio/submodule)
 |-> Apps
     |    
     |-> kumale
@@ -28,12 +30,14 @@
 
 
 #### installazioni da includere:
+[Kumale](https://github.com/CIMAFoundation/portal-kumale.git) | [Howtodo](https://github.com/CIMAFoundation/howtodo.git) | [Sentinel]() | [Live](https://github.com/CIMAFoundation/portal-live2.git) 
 
-[Kumale](https://github.com/CIMAFoundation/portal-kumale.git) | [Howtodo]() | [Sentinel]() | [Live]() | [Framework](https://github.com/CIMAFoundation/portal2-framework.git) | [Languages](https://github.com/CIMAFoundation/portal-languages.git)  
+####submodules:
+[Framework](https://github.com/CIMAFoundation/portal2-framework.git) | [Languages](https://github.com/CIMAFoundation/portal-languages.git)  
 
 
 ###Note:
-Per ogni installazione compresa quella di progetto, puntarsi su branch adatto ed eseguire:
+Per ogni installazione compresa quella di progetto puntarsi su branch <i><b>{nome app}-PSR</b></i> ed eseguire:
 ```npm
 npm install
 ```

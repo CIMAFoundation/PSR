@@ -1,0 +1,38 @@
+@import '_palette';
+
+$height: 4em;
+$height-var: 1em;
+$font-size-base: 12px;
+
+//typo
+$base-font-size: 0.9375em;
+$base-line-height: 1.4em;
+$measure: 760px;
+
+//slider track
+
+$track-color: $secondaryColor;
+$thumb-color: $complementary;
+
+$thumb-radius: 50%;
+$thumb-height: 20px;
+$thumb-width: 20px;
+$thumb-shadow-size: 0px;
+$thumb-shadow-blur: 0px;
+$thumb-shadow-color: #111;
+$thumb-border-width: 1px;
+$thumb-border-color: $color_01;
+
+$track-width: 100%;
+$track-height: 10px;
+$track-shadow-size: 2px;
+$track-shadow-blur: 2px;
+$track-shadow-color: #222;
+$track-border-width: 0px;
+$track-border-color: black;
+
+$track-radius: 5px;
+$contrast: 5%;
+$time:0.2s;
+
+

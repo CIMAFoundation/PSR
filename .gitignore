@@ -106,9 +106,14 @@ dist
 
 # TernJS port file
 .tern-port
-/howtodo/node_modules/
 /apps/howtodo/.idea/
-/.idea/
+/apps/kumale/.idea/
+/apps/live2/.idea/
+/apps/*/.idea/
+/apps/*/js/config/
+/apps/howtodo/js/config/
+/apps/kumale/js/config/
+/apps/live/js/config/
 /config/
-/apps/howtodo/config/
-/apps/howtodo/config/config.js
+/.idea
+.idea/

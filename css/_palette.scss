@@ -1,0 +1,63 @@
+$skin: "prevenzione_comune";
+
+
+$primaryColor: #a0c2dd;
+$complementary:#f3ce3f;
+
+
+$brand-primary: rgb(39, 128, 227);
+$brand-success: rgb(77, 182, 118);
+$brand-info: rgb(102, 187, 182);
+$brand-warning: $complementary;
+$brand-danger: rgb(217, 83, 79);
+
+$violet: $primaryColor;
+
+
+
+//$navbar-default-bg: $primaryColor;
+//$navbar-default-bg: fade($primaryColor, 75%);
+$navbar-default-bg: $primaryColor;
+
+//$secondaryColor: #41be9f;
+$secondaryColor: #d53429;
+$shadeDark_01: darken($primaryColor, 10%);
+$shadeDark_02: darken($primaryColor, 15%);
+$shadeLight_01: lighten($primaryColor, 10%);
+$shadeLight_02: lighten($primaryColor, 20%);
+$shadeLight_03: lighten($primaryColor, 50%);
+
+//$complementary: saturate(adjust-hue(lighten($primaryColor, 40%),180),100%);;
+
+//#CCCC00
+$complementaryDark_01: darken($complementary, 10%);
+$complementaryDark_02: darken($complementary, 20%);
+$complementaryLight_01: lighten($complementary, 10%);
+$complementaryLight_02: lighten($complementary, 25%);
+
+$dark_violet: $shadeDark_01;
+$light_violet: $shadeLight_01;
+
+$color_00: #333;
+$color_01: white;
+$color_02: #ddd;
+$color_03: #aaa;
+
+
+//$gray-base:              #000;
+$gray-base:              $color_03;
+$gray-darker:            darken($gray-base, 20%); // #222
+$gray-dark:              darken($gray-base, 13.5%);   // #333
+$gray:                   lighten($gray-base, 10%); // #555
+$gray-light:             lighten($gray-base, 20%); // #777
+$gray-lighter:           lighten($gray-base, 30%); // #eee
+
+
+$placeholder: grey;
+
+
+$soglia_bianco: white;
+$soglia_verde: #32cd32;
+$soglia_gialla: #e8de24;
+$soglia_arancione: orange;
+$soglia_rossa: #d73942;
