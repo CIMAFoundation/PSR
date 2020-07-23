@@ -1,1 +1,83 @@
-ciao Header
+<header id="header" class="fixed-top">
+    <div class="container">
+        <div class="row">
+            <nav class="col-12 navbar navbar-expand-lg">
+
+                <div class="site__logo">
+                    <a href="apps/meteoappassionati/index.html?skin=9" target="_parent">
+                        <img class="site__logo--media" src="apps/segnalazioni/img/Logo_RISK-COM_white.png" alt="">
+                        <img class="site__logo--media--mobile" src="apps/segnalazioni/img/Logo_RISK-COM_white_SQ.png" alt="">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse w-100 justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav float-left" >
+                        <li class="nav-item"> <!--active class-->
+                            <a class="nav-link" data-click="scroll-to-target"  href="" target="_parent">Example</a>
+                        </li>
+
+
+                        <!--SOLO PER HOME-->
+                        <li class="nav-item ml-lg-3 d-none go-to-portal-btn">
+                            <a class="nav-link login text-center" href="//meteoappassionati.cimafoundation.org/apps/meteoappassionati/dashboard.html" >Vai al Portale</a> <!--data-toggle="modal" data-target="#loginModal"-->
+                        </li>
+
+
+                        <!--SOLO PER DASHBOARD-->
+                        <li class="nav-item ml-lg-3 login-btn" ng-show="!acSession.authenticated">
+                            <a class="nav-link login text-center"
+                               href=""
+                               data-toggle="modal"
+                               data-target="#loginModal"
+                            >Login</a> <!--data-toggle="modal" data-target="#loginModal"-->
+                        </li>
+                        <li class="nav-item lang ">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a type="button" class="mx-2" href=""
+                                   ng-click="toggle.switch_C = !toggle.switch_C"
+                                   ng-class="{'active':!toggle.switch_C}"
+                                >
+                                    <img src="languages/it_IT.png" alt="">
+                                </a>
+                                <a type="button" class="mx-2" href=""
+                                   ng-click="toggle.switch_C = !toggle.switch_C"
+                                   ng-class="{'active':toggle.switch_C }"
+                                >
+                                    <img src="languages/fr_FR.png" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acauthpsr" ng-show="acSession.authenticated" ></div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+
+
+<!--MODALE LOGIN-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Accedi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="site__section--login acauthpsr pb-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
