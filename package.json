@@ -1,0 +1,32 @@
+{
+  "name": "PSR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/startindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "angular": "^1.5.3",
+    "angular-dynamic-locale": "^0.1.37",
+    "angular-i18n": "^1.7.8",
+    "angular-sanitize": "^1.4.14",
+    "angular-translate": "^2.18.1",
+    "angular-ui-bootstrap": "^2.5.6",
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "highcharts": "^7.2.0",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
+    "leaflet": "^1.5.1",
+    "moment": "^2.24.0",
+    "popper.js": "^1.16.0",
+    "sockjs-client": "^1.4.0",
+    "stomp-websocket": "^2.3.4-next"
+  }
+}

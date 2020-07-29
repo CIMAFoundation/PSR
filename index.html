@@ -23,13 +23,23 @@
     <base href="../../" target="_blank">
 
 
-    <!-- bower components angular-->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/ng-table/docs/app/vendor/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <!-- bower components angular translate-->
-    <script src="bower_components/angular-translate/angular-translate.js"></script>
-    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <!--jquery -  bootstrap-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-ui-dist/jquery-ui.js"> </script>
+    <!--    popper.js-->
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"> </script>
+
+    <!-- angular scritps-->
+    <script src="node_modules/angular/angular.js"></script>
+
+    <!-- sanitize Bower differenti Prevenzione/Mydewetra_LAST-->
+    <script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script src="node_modules/angular-translate/dist/angular-translate.js"></script>
+    <script src="node_modules/angular-translate/dist/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="node_modules/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="node_modules/angular-i18n/angular-locale_it-it.js"></script>
+
 
     <!--Giusy aggiunto per sentine-->
     <!--google api-->
@@ -46,15 +56,22 @@
 
     <title>PSR</title>
 
+    <script src="/js/startindex.js"></script>
 
 
 
-    <!-- ================== BEGIN BASE JS ================== -->
-    <script src="bower_components/pace/pace.min.js"></script>
-    <!-- ================== END BASE JS ================== -->
+
+    <script src="apps/live2/node_modules/moment/moment.js" ></script>
+
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="apps/live2/node_modules/animate.css/animate.css"/>
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="apps/live2/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- @fortawesome-->
+    <link rel="stylesheet" href="apps/live2/node_modules/@fortawesome/fontawesome-free/css/all.css"/>
 
     <!-- application scripts -->
-    <script src="/js/startindex.js"></script>
 
 
 
@@ -62,7 +79,7 @@
 
 
 </head>
-<body ng-app="startindex" ng-controller="startindexCtrl" data-spy="scroll" data-target="#header-navbar" data-offset="51">
+<body ng-app="startindex" ng-controller="startindexCtrl"  data-target="#header-navbar" >
 
 <!-- begin #page-container -->
 <div id="page-container" class="fade index" >
@@ -90,14 +107,14 @@
             <!-- begin navbar-collapse -->
             <div class="collapse navbar-collapse" id="header-navbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home" data-click="scroll-to-target">{{'MENUHOME' | translate}}</a></li>
-                    <li><a href="#about" data-click="scroll-to-target">{{'MENUPORTAL' | translate}}</a></li>
-                    <!--<li><a href="#service" data-click="scroll-to-target">{{'MENUFEATURES' | translate}}</a></li>-->
-                    <li><a href="#work" data-click="scroll-to-target">{{'MENUAPP' | translate}}</a></li>
-                    <li><a href="#contact" data-click="scroll-to-target">{{'MENUCONTACT' | translate}}</a></li>
-                    <li><a href="#footer" data-click="scroll-to-target">{{'MENUDISCLAIMER' | translate}}</a></li>
+                    <li class="active"><a href="#home" >{{'MENUHOME' | translate}}</a></li>
+                    <li><a href="#about" >{{'MENUPORTAL' | translate}}</a></li>
+                    <!--<li><a href="#service" >{{'MENUFEATURES' | translate}}</a></li>-->
+                    <li><a href="#work" >{{'MENUAPP' | translate}}</a></li>
+                    <li><a href="#contact" >{{'MENUCONTACT' | translate}}</a></li>
+                    <li><a href="#footer" >{{'MENUDISCLAIMER' | translate}}</a></li>
                     <li class="active dropdown">
-                        <a href="#" data-click="scroll-to-target" data-target="#" data-toggle="dropdown"><img ng-src="images/languages/{{currentLang}}.png" class="md_logo_language"/> <b class="caret"></b></a>
+                        <a href="#"  data-target="#" data-toggle="dropdown"><img ng-src="images/languages/{{currentLang}}.png" class="md_logo_language"/> <b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-menu-left animated fadeInDown">
                             <li><div class="aclanguagenewindex"></div></li>
                         </ul>
@@ -148,7 +165,7 @@
     <!-- end #home -->
 
     <!-- begin #portale -->
-    <div id="portale" class="content" style="padding-bottom: 0px;" data-scrollview="true"> <!-- aggiunto padding bottom -->
+    <div id="portale" class="content" style="padding-bottom: 0px;" > <!-- aggiunto padding bottom -->
         <!-- begin container -->
         <div class="container" data-animation="true" data-animation-type="fadeInDown">
             <h2 class="content-title">Il portale</h2>
@@ -172,7 +189,7 @@
 <!-- end #portale -->
 
 <!-- begin #milestone -->
-<div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
+<div id="milestone" class="content bg-black-darker has-bg" >
     <!-- begin content-bg -->
     <div class="content-bg" style="background-color: #663399">
         <img src="img/sfondo_3.jpg" alt="Milestone" />
@@ -222,7 +239,7 @@
 <!-- end #milestone -->
 
 <!-- begin #work -->
-<div id="work" class="content" data-scrollview="true">
+<div id="work" class="content" >
     <!-- begin container -->
     <div class="container" data-animation="true" data-animation-type="fadeInDown">
         <h2 class="content-title">Applicazioni</h2>
@@ -299,7 +316,7 @@
 <!-- end work -->
 
 <!-- begin #contact -->
-<div id="contact" class="content bg-silver-lighter" data-scrollview="true">
+<div id="contact" class="content bg-silver-lighter" >
     <!-- begin content-bg -->
     <!-- begin container -->
     <div class="container">
@@ -392,27 +409,6 @@
 </div>
 <!-- end #page-container -->
 
-<!-- ================== BEGIN BASE JS ================== -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/jquery-migrate/jquery-migrate.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
-<!--[if lt IE 9]>
-<script src="bower_components/html5shiv/html5shiv.js"></script>
-<script src="bower_components/respond/dest/respond.min.js"></script>
-<script src="bower_components/ExplorerCanvas/excanvas.min.js"></script>
-<![endif]-->
-<script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-<script src="bower_components/scrollMonitor/scrollMonitor.js"></script>
-<script src="apps/acronetwork/assets/js/apps.min.js"></script>
-<!--<script src="apps/acronetwork/assets/js/apps_front.js"></script>-->
-<!-- ================== END BASE JS ================== -->
-
-<script>
-    $(document).ready(function() {
-        App.init();
-    });
-</script>
-</body>
 </html>
 
 
