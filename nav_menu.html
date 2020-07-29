@@ -1,0 +1,22 @@
+
+<div  class="flex-container menu">
+    <!--div del gruppo-->
+    <div ng-repeat="grp in ::appGroups" class="flex-container ambiti  {{::grp}}" ng-if="(getApp(grp).length>0)">
+        <label for="" >{{"GROUP_"+grp | translate}}</label>
+
+        <div ng-repeat="app in getApp(grp)" class="flex-item" >
+            <!--app abilitata-->
+            <a ng-if="isAppEnabled(app)" href="{{::appUrl(app)}}"  class="text-center animated zoomInUp titip-default titip-fade titip-bottom"  ng-class="{able: app.active, active: app.open}">
+                <!--ng-class="{active: isActiveApp(app)}"-->
+                <i class="fa fa-2x" ng-class="::app.classIcon"></i>
+                <span class="animated fadeIn delay-005">{{(app.name|translate)}}</span>
+            </a>
+            <!--app non abilitata-->
+            <a class="text-center animated fadeIn delay-004 disabled" href="" ng-if="!isAppEnabled(app)">
+                <i class="fa fa-2x" ng-class="::app.classIcon"></i>
+                <span class="animated fadeIn delay-005">{{(app.name|translate)}}</span>
+            </a>
+        </div>
+
+    </div>
+</div>

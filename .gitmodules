@@ -1,0 +1,8 @@
+[submodule "languages"]
+	path = languages
+	url = https://github.com/CIMAFoundation/portal-languages.git
+	branch = dev-PSR
+[submodule "framework"]
+	path = framework
+	url = https://github.com/CIMAFoundation/portal-framework.git
+	branch = dev-PSR

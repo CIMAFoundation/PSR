@@ -1,0 +1,21 @@
+
+<!-- Bandiera sull'header -->
+
+<div class="d-flex align-items-center">
+    <a
+            href=""
+            ng-repeat="lang in languages"
+            ng-click="setLang(lang)"
+            class="lang mx-1 my-2"
+    >
+        <img    ng-src="languages/{{lang}}.png"
+                ng-if="!(currentLang == lang) || currentLang == lang "
+                ng-class="{'nocurrent': !(currentLang == lang), 'current': currentLang == lang}"
+        />
+
+
+
+    </a>
+</div>
+
+

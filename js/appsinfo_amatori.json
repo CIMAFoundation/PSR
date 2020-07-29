@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Amministrazione",
+    "descr": "Admin",
+    "classIcon": "ico-admin_amatori_02",
+    "folder": "admin",
+    "externalUrl": "apps/admin/index_skin.html?skin=9",
+    "logo": "portals/commons/icons_app/svg - white/admin_amatori_02.svg",
+    "groupName": "admin"
+  },
+  {
+    "name": "Associazioni",
+    "descr": "",
+    "classIcon": "ico-associazioni",
+    "folder": "-",
+    "externalUrl": "",
+    "logo": "",
+    "groupName": "admin"
+  },
+  {
+
+    "name": "Segnalazioni",
+    "descr": "Kumale 2.0",
+    "classIcon": "ico-meteoPOST",
+    "folder": "kumale",
+    "externalUrl": "apps/kumale/index_skin.html?skin=9",
+    "logo": "portals/commons/icons_app/svg - white/meteoPOST.svg",
+    "groupName": "comunicazione"
+  },
+  {
+  "name": "Glossario",
+  "descr": "Glossario",
+  "classIcon": "ico-glossario",
+  "folder": "howtodo",
+  "externalUrl": "apps/segnalazioni/glossario/glossario.pdf",
+  "logo": "portals/commons/icons_app/svg - white/glossario.svg",
+  "groupName": "comunicazione"
+  }
+]

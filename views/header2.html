@@ -1,0 +1,76 @@
+<header id="header" class="">
+    <div class="container">
+        <div class="row">
+            <nav class="col-12 navbar navbar-expand-lg">
+                <div class="site__logo">
+                    <a href="" target="_parent">
+                        <img class="site__logo--media" src="" alt="">
+                        <img class="site__logo--media--mobile" src="" alt="">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse w-100 justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav float-left" >
+
+
+                        <!--link homepage da loggato-->
+                        <li class="nav-item ml-lg-3" ng-show="acSession.authenticated"> <!--active class-->
+                            <a class="nav-link" data-click="scroll-to-target"  href="" target="_parent">Example</a>
+                        </li>
+
+
+                        <!--link homepage da sloggao-->
+                        <li class="nav-item ml-lg-3 go-to-portal-btn" ng-show="!acSession.authenticated">
+                            <a class="nav-link login text-center" href="" >Vai al Portale</a> <!--data-toggle="modal" data-target="#loginModal"-->
+                        </li>
+
+
+                        <!-- login -->
+                        <li class="nav-item ml-lg-3 login-btn" ng-show="!acSession.authenticated">
+                            <a class="nav-link login text-center"
+                               href=""
+                               data-toggle="modal"
+                               data-target="#loginModal"
+                            >Login</a> <!--data-toggle="modal" data-target="#loginModal"-->
+                        </li>
+
+                        <!-- languages-->
+                        <li class="nav-item ml-lg-3 langPSR ">
+
+                        </li>
+                        <li>
+                            <div class="authpsr" ng-show="acSession.authenticated" ></div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+
+
+<!--MODALE LOGIN-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Accedi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="site__section--login authpsr pb-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
