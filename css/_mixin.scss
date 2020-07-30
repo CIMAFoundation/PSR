@@ -1,0 +1,46 @@
+
+/*
+=====================================================================
+
+import font from google
+
+=====================================================================
+*/
+
+
+
+/// List to String (like JS's `join`)
+/// Converts Sass list to string using `$glue` separator.
+/// @param {list} $list
+/// @param {string} $glue [''] - What join list items with (ex `,`)
+/// @param {bool} $is-nested [false]
+/// @return {string}
+/// @link http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/ Source
+@function to-string($list, $glue: '', $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: $result#{to-string($e, $glue, true)};
+    }
+
+    @else {
+      $result: if($i != length($list) or $is-nested, $result#{$e}#{$glue}, $result#{$e});
+    }
+  }
+
+  @return $result;
+}
+
+/// Import Google Font
+/// @param {list} $variants - Font Weight and Style variants (i.e. `("300", "400", "400i")`) - `i` = italic
+/// @param {string} $family - Font Family with spaces as `+` (i.e. `Source+Sans+Pro`)
+/// @output `@import()` statement
+/// @example scss
+///   @include google-font-import($variants: ("300", "400", "400i", "700"), $family: "Source+Sans+Pro");
+///   // would output `@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");`
+@mixin google-font-import($variants, $family) {
+  @import url('//fonts.googleapis.com/css?family=#{$family}:#{to-string($variants, ",")}');
+}

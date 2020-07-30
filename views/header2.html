@@ -2,31 +2,33 @@
     <div class="container">
         <div class="row">
             <nav class="col-12 navbar navbar-expand-lg">
-                <div class="site__logo">
-                    <a href="" target="_parent">
-                        <img class="site__logo--media" src="" alt="">
-                        <img class="site__logo--media--mobile" src="" alt="">
-                    </a>
+                <div class="site__logo d-flex align-items-center">
+
+                        <img class="site__logo--project" src="" alt="">
+                        <img class="site__logo--media d-none d-lg-block" src="" alt="">
+                        <span class="d-none d-lg-block">{{'TITLE' | translate}}</span>
+                        <img class="site__logo--media--mobile d-none d-sm-block d-lg-none " src="" alt="">
+<!--                        <div class="d-lg-none">hide on lg and wider screens</div>-->
+<!--                        <div class="">hide on screens smaller than lg</div>-->
+
                 </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
+
                 <div class="collapse navbar-collapse w-100 justify-content-lg-end" id="navbarNav">
                     <ul class="navbar-nav float-left" >
 
-
                         <!--link homepage da loggato-->
                         <li class="nav-item ml-lg-3" ng-show="acSession.authenticated"> <!--active class-->
-                            <a class="nav-link" data-click="scroll-to-target"  href="" target="_parent">Example</a>
+                            <a class="nav-link" href="" target="_parent">Example</a>
                         </li>
-
 
                         <!--link homepage da sloggao-->
                         <li class="nav-item ml-lg-3 go-to-portal-btn" ng-show="!acSession.authenticated">
                             <a class="nav-link login text-center" href="" >Vai al Portale</a> <!--data-toggle="modal" data-target="#loginModal"-->
                         </li>
-
 
                         <!-- login -->
                         <li class="nav-item ml-lg-3 login-btn" ng-show="!acSession.authenticated">
