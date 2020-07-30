@@ -6,3 +6,7 @@
 	path = framework
 	url = https://github.com/CIMAFoundation/portal-framework.git
 	branch = dev-PSR
+[submodule ".\\apps\\live2"]
+	path = .\\apps\\live2
+	url = https://github.com/CIMAFoundation/portal-live2.git
+	branch = live-PSR
