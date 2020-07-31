@@ -50,8 +50,8 @@
      ng-show="amIAuthenticated()"
      aria-labelledby="dropdownHatMenu"
 >
-    <input type="text" placeholder="Search" ng-model="userSearch">
-    <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats | filter: userSearch.hat.descr" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
+    <input type="text" class="form-control m-2 w-75 mx-auto position-sticky sticky-top" placeholder="Filtro su Hat" ng-model="userSearch">
+    <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats | filter: userSearch" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
         <span> {{hat.descr}}</span>
     </a>
 </div>
