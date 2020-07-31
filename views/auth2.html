@@ -1,5 +1,14 @@
-<div class="user d-flex" ng-if="amIAuthenticated()" type="button" data-toggle="dropdown"
-     aria-haspopup="true" aria-expanded="false">
+<!-- Auth - LOGGED In -->
+<div class="auth auth-user d-flex"
+     ng-if="amIAuthenticated()"
+     type="button"
+     data-toggle="dropdown"
+     aria-haspopup="true"
+     aria-expanded="false"
+     id="dropdownHatMenu"
+>
+    <div class="user-pic" ng-style="{'background-image': 'url(' + acSession.user.avatar + ')'}">
+    </div>
     <div class="text-data mr-2">
         <div>{{acSession.user.name}}</div>
         <div class="mt-1">
@@ -7,16 +16,13 @@
                 <span class="fas fa-sign-out-alt"></span>
                 <span ><strong> {{ 'LBLLOGOUT' | translate}}</strong></span>
             </a>
-        </div><!--({{acSession.hat.descr}})-->
-    </div>
-    <div class="user-pic" ng-style="{'background-image': 'url(' + acSession.user.avatar + ')'}">
+        </div>
     </div>
 </div>
 
 
-<!-- Auth - not loggedIn -->
-
-<div class="auth outside navbar-collapse" ng-if="!amIAuthenticated()">
+<!-- Auth - NOT loggedIn -->
+<div class="auth auth-form navbar-collapse" ng-if="!amIAuthenticated()">
     <div class="d-flex" >
         <input class="form-control" type="text" required  type="text" ng-model="authData.user" placeholder="{{ 'NAME' | translate}}" autocomplete="off">
 
@@ -26,6 +32,7 @@
             <i class="fa fa-sign-in fa-2x visible-xs visible-sm" title="{{ 'LBLACCEDI' | translate}}"></i>
             <span class="hidden-xs hidden-sm"> {{ 'LBLACCEDI' | translate}}</span>
         </button>
+
         <button class="btn btn-warning" data-toggle="dropdown" ng-show="bGuestShow" ng-click="closeIntro()" data-hint="Guest">
 
             <i class="fa fa-eye fa-2x visible-xs visible-sm" title="{{ 'LBLGUEST' | translate}}"></i>
@@ -39,8 +46,12 @@
 
 
 <!-- dropdown -->
-<div class="auth dropdown-menu" ng-show="amIAuthenticated()">
-    <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
+<div class="dropdown-menu dropdown-menu--hats"
+     ng-show="amIAuthenticated()"
+     aria-labelledby="dropdownHatMenu"
+>
+    <input type="text" placeholder="Search" ng-model="userSearch">
+    <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats | filter: userSearch.hat.descr" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
         <span> {{hat.descr}}</span>
     </a>
 </div>

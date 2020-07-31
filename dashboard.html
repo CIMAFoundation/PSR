@@ -175,59 +175,67 @@
 <body ng-app="prevenzione" ng-controller="dashboardCtrl" ng-init="setLang()">
 
 
-<div class="page-container dashboard ">
-    <div class="header ">
+<div class="page-container app dashboard psr">
+    <div class="header">
         <ac-header-new></ac-header-new>
     </div>
     <div class="content-container">
-        <div id="header-navbar" class="navbar header-navbar collapse in" ng-if="acSession.authenticated"  >
-            <!-- begin sidebar scrollbar -->
-            <!-- begin sidebar nav -->
-            <!--MENU APPLICAZIONI DA DATABASE (ATTIVO)-->
-            <div ng-include="'apps/prevenzione/nav_menu.html'"></div>
-        </div>
+        <!--MENU APPLICAZIONI DA DATABASE (ATTIVO)-->
+        <div ng-include="'apps/prevenzione/nav_menu.html'" id="header-navbar" class="navbar header-navbar" ng-if="acSession.authenticated"></div>
 
-<!--start grid-->
-<!--TODO: METTERE IL BLOCCO IN UNA DIRETTIVA (PER INTERAZIONE MAPPA/POSTLIST)-->
-        <div class="v block " ng-if="acSession.authenticated">
 
-            <!--<div class="head panel-heading">
-                <span class="title brand_slug"><strong>{{"LIVEMETEO"|translate}}</strong></span>
-            </div>-->
-        <!--            <div class="content">-->
-                <kumalemapwidget style="width: 100%;"></kumalemapwidget>
-        <!--            </div>-->
-        </div>
+        <!--start grid-->
 
-        <div class="k block over " ng-if="acSession.authenticated" >
-
+        <!-- widget kumale-->
+        <div class="k block over " ng-if="isApplicationAllowed('kumale') && acSession.authenticated" >
             <div class="head panel-heading">
-                <span class="title brand_slug"><strong>{{"METEOPOST"|translate}}</strong></span>
+                <span class="title brand_slug">{{"KUMALE"|translate}}</span>
             </div>
             <div class="content">
-                <style>
-                    .K_box_scroll
-                    {
-                        max-height:inherit!important;
-                        overflow-x: inherit!important;
-                        overflow-y: inherit!important;
-                    }
-                </style>
-                <kumale-post-list-widget-amatori></kumale-post-list-widget-amatori>
-
+                <kumale-post-list-widget style="width:100%;"></kumale-post-list-widget>
             </div>
         </div>
-<!-- FINE BLOCCO -->
 
+
+        <!-- radar/rain-->
+        <div class="block">
+            <sriwidget model="RADAR_DPC_SRI" variable="SRI;0"></sriwidget>
+        </div>
+        <div class="block">
+            <rainmapwidget model="RAINMAP_ITALY" variable=""></rainmapwidget>
+        </div>
+
+
+        <!-- sentinel-->
+        <div class="s block">
+            <div class="head panel-heading">
+                <span class="title brand_slug">{{"SENTINEL"|translate}}</span>
+            </div>
+            <div class="content">
+                <div class="widget sentinel">
+                    <link rel="stylesheet" href="apps/sentinel/css/sentinel_widget.css">
+                    <style>
+                        .widget {padding:0;}
+                        .widget.sentinel {margin-bottom: inherit;}
+                        .widget.sentinel .map-container-main {}
+                    </style>
+                    <map-directve-widget></map-directve-widget>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--end grid-->
+
+    </div>
     <ac-logout></ac-logout>
-    </div>
-    <!--end grid-->
-
-
     <div class="footer">
-<!--        <ac-footer></ac-footer>-->
-
+        <ac-footer></ac-footer>
     </div>
+
+
+
 </div>
 
 
