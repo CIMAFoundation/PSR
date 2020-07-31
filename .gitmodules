@@ -10,7 +10,3 @@
 	path = .\\apps\\live2
 	url = https://github.com/CIMAFoundation/portal-live2.git
 	branch = live-PSR
-[submodule "apps/kumale"]
-	path = apps/kumale
-	url = https://github.com/CIMAFoundation/portal-kumale.git
-	branch = kumale-PSR
