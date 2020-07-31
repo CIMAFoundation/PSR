@@ -1,15 +1,17 @@
 
 <footer class="footer {{currentOs.phase.idfase}} d-flex justify-content-between align-items-center">
-    <div ng-click="iconize = !iconize" >
+<!--    <div ng-click="iconize = !iconize" >-->
 <!--        ng-if="isfireApp"-->
-        <button class="btn btn-info btn--kredit" type="button">
+        <button class="btn btn-info btn--kredit"
+                type="button"
+                data-toggle="modal"
+                data-target="#prjModal">
             <i class="fas fa-info-circle"></i>
         </button>
-        <div class="block block--kredit" ng-if="iconize" ng-style="(!iconize)?{}:{}" >
-            <img src="img/psr.jpg" alt="">
-        </div>
+        <div ng-include="'views/prj.html'" ></div>
+<!--    ng-if="iconize" ng-style="(!iconize)?{}:{}"-->
     </div>
-    <ac-date></ac-date>
+    <ac-date ng-show="acSession.authenticated"></ac-date>
     <img class="mx-2" src="img/acrotec_png.png" alt="">
     <img class="mx-2" src="img/cima_png.png" alt="">
     <!--<div class="flex-item m-l-20 block">
@@ -17,3 +19,23 @@
 
     <os-view-form></os-view-form>
 </footer>
+
+
+<!--MODALE PRJ-->
+<!--
+<div class="modal fade" id="prjModal" tabindex="-1" role="dialog" aria-labelledby="prjModal" aria-hidden="true"  >
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Accedi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="site__section&#45;&#45;login authpsr pb-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+-->

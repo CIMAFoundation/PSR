@@ -44,3 +44,11 @@ import font from google
 @mixin google-font-import($variants, $family) {
   @import url('//fonts.googleapis.com/css?family=#{$family}:#{to-string($variants, ",")}');
 }
+
+
+
+
+@mixin size($size) {
+  height:$size;
+  width:$size;
+}

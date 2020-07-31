@@ -1,12 +1,23 @@
-@import "vars";
-@import "mixin";
+@import "_palette";
+@import "_vars";
+@import "_variable";
+@import "_mixin";
+@include google-font-import($variants: ("300", "400", "400i", "700"), $family: "Barlow+Semi+Condensed");
+
+$family: 'Barlow Semi Condensed';
+
+body, html  {
+  font: 300 20px $family, sans-serif;
+}
+
+
 
 :root {
   --font-size--small: calc((14/16) * 1rem); /* 14px */
   --font-size--default: calc((16/16) * 1rem); /* 16px */
   --font-size--large: calc((24/16) * 1rem); /* 24px */
 }
- 
+
 .font-size--small {
   font-size: var(--font-size--small);
 }
@@ -17,4 +28,34 @@
 
 .font-size--large {
   font-size: var(--font-size--large);
+}
+
+
+/*
+=====================================================================
+* Element parts *
+=====================================================================
+*/
+
+
+
+header, footer {
+  background: $primaryColor;
+
+}
+variable-chooser, cesium, chart, dock,
+header, main, footer {border:none;}
+
+.site__logo {
+  &--project {
+    background-image: url('../img/logo-regione.svg');
+    @include size(64px);
+  }
+  &--media {filter: invert(0.3);}
+  &--title {color:$secondaryColor; font-family: $family;}
+}
+
+.lv2_box_map_command {
+  left: 50px;
+  margin-top: 10px;
 }

@@ -1,7 +1,0 @@
-@import "mixin";
-@include google-font-import($variants: ("300", "400", "400i", "700"), $family: "Barlow+Semi+Condensed");
-
-body, html  {
-  font: 300 20px 'Barlow Semi Condensed', sans-serif;
-}
-

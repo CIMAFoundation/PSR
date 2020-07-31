@@ -3,22 +3,19 @@
         <div class="row">
             <nav class="col-12 navbar navbar-expand-lg">
                 <div class="site__logo d-flex align-items-center">
-
-                        <img class="site__logo--project" src="" alt="">
-                        <img class="site__logo--media d-none d-lg-block" src="" alt="">
-                        <span class="d-none d-lg-block">{{'TITLE' | translate}}</span>
-                        <img class="site__logo--media--mobile d-none d-sm-block d-lg-none " src="" alt="">
-<!--                        <div class="d-lg-none">hide on lg and wider screens</div>-->
-<!--                        <div class="">hide on screens smaller than lg</div>-->
-
+                    <img class="site__logo--project" src="" alt="">
+                    <img class="site__logo--media d-none d-lg-block" src="" alt="">
+                    <span class="site__logo--title d-none d-lg-block" ng-if="!isfireApp">{{'TITLE' | translate}}</span>
+                    <span class="site__logo--title d-none d-lg-block" ng-if="isfireApp">{{ 'TITLE_2ND' | translate}}</span>
+                    <img class="site__logo--media mobile d-none d-sm-block d-lg-none " src="" alt="">
                 </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
 
-                <div class="collapse navbar-collapse w-100 justify-content-lg-end" id="navbarNav">
-                    <ul class="navbar-nav float-left" >
+                <div class="collapse navbar-collapse w-100 justify-content-lg-end " id="navbarNav">
+                    <ul class="navbar-nav float-right d-flex align-items-center" >
 
                         <!--link homepage da loggato-->
                         <li class="nav-item ml-lg-3" ng-show="acSession.authenticated"> <!--active class-->
@@ -40,7 +37,7 @@
                         </li>
 
                         <!-- languages-->
-                        <li class="nav-item ml-lg-3 langPSR ">
+                        <li class="nav-item ml-lg-3 langpsr ">
 
                         </li>
                         <li>

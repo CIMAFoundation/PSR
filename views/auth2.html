@@ -1,5 +1,5 @@
 <!-- Auth - LOGGED In -->
-<div class="auth auth-user d-flex"
+<div class="auth auth-user d-flex align-items-center flex-row-reverse"
      ng-if="amIAuthenticated()"
      type="button"
      data-toggle="dropdown"
@@ -11,6 +11,7 @@
     </div>
     <div class="text-data mr-2">
         <div>{{acSession.user.name}}</div>
+        <span class="small">{{acSession.hat.descr}}</span>
         <div class="mt-1">
             <a  class="logout" href="javascript:" ng-click="logout()" target="_top">
                 <span class="fas fa-sign-out-alt"></span>
@@ -50,12 +51,18 @@
      ng-show="amIAuthenticated()"
      aria-labelledby="dropdownHatMenu"
 >
-    <input type="text" class="form-control m-2 w-75 mx-auto position-sticky sticky-top" placeholder="Filtro su Hat" ng-model="userSearch">
+    <input type="text"
+           class="form-control m-2 w-75 mx-auto position-sticky sticky-top"
+           placeholder="Filtro su Hat"
+           ng-model="userSearch"
+
+    >
+    <!--<a href="" class="clear" ng-click="userSearch=null" >
+        <i class="fas fa-times" ></i>
+    </a>-->
     <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats | filter: userSearch" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
         <span> {{hat.descr}}</span>
     </a>
 </div>
 <!-- Basic dropdown -->
-
-
 
