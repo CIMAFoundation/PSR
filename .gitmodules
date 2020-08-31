@@ -6,7 +6,3 @@
 	path = framework
 	url = https://github.com/CIMAFoundation/portal-framework.git
 	branch = dev-PSR
-[submodule "apps/kumale"]
-	path = apps/kumale
-	url = https://github.com/CIMAFoundation/portal-kumale.git
-	branch = kumale-PSR
