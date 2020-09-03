@@ -10,7 +10,8 @@
     >
         <img    ng-src="languages/{{lang}}.png"
                 ng-if="!(currentLang == lang) || currentLang == lang "
-                ng-class="{'nocurrent': !(currentLang == lang), 'current': currentLang == lang}"
+                ng-class="{'lang-nocurrent': !(currentLang == lang), 'lang-current': currentLang == lang}"
+                class="w-50"
         />
 
 
