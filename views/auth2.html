@@ -60,7 +60,12 @@
     <!--<a href="" class="clear" ng-click="userSearch=null" >
         <i class="fas fa-times" ></i>
     </a>-->
-    <a  class="dropdown-item"  ng-repeat="hat in acSession.user.hats | filter: userSearch" href="javascript:void(0)" ng-click="setHat(hat)" target="_top" >
+    <a  class="dropdown-item"
+        ng-repeat="hat in acSession.user.hats | filter: userSearch"
+        href="javascript:void(0)"
+        ng-click="setHat(hat)"
+        target="_top"
+    >
         <span> {{hat.descr}}</span>
     </a>
 </div>
