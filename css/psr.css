@@ -33,6 +33,16 @@ body, html {
 
 /*
 =====================================================================
+* Reset struct *
+=====================================================================
+*/
+variable-chooser, cesium, chart, dock,
+header, main, footer {
+  border: none;
+}
+
+/*
+=====================================================================
 * Element parts *
 =====================================================================
 */
@@ -40,11 +50,11 @@ header, footer {
   background: #a0c2dd;
 }
 
-variable-chooser, cesium, chart, dock,
-header, main, footer {
-  border: none;
-}
-
+/*
+=====================================================================
+* LIVE & SENTINEL *
+=====================================================================
+*/
 .site__logo--project {
   background-image: url("../img/logo-regione.svg");
   height: 64px;
@@ -63,4 +73,10 @@ header, main, footer {
   margin-top: 10px;
 }
 
-/*# sourceMappingURL=sentinel-psr.css.map */
+/*
+=====================================================================
+* KUMALE *
+=====================================================================
+*/
+
+/*# sourceMappingURL=psr.css.map */
